@@ -1,0 +1,16 @@
+# https://taskfile.dev
+version: '3'
+tasks:
+  install-scala:
+    desc: install scala
+    status:
+    - scala -version
+    cmds:
+    # try to use sdkman!
+    - sdk install sbt
+    - sbt -version
+    - sdk install scala
+    - scala -version
+    # - sdk install scala
+    # - brew install sbt
+    # - brew install scala
